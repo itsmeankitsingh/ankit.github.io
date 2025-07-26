@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Me - BloodBank Connect Creator">
+    <title>About Me | BloodBank Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e53935;
+            --primary-dark: #c62828;
+            --secondary: #1e88e5;
+            --dark: #263238;
+            --light: #f5f5f5;
+            --gray: #78909c;
+            --success: #43a047;
+            --warning: #ff9800;
+            --shadow: 0 4px 24px rgba(0,0,0,0.12);
+            --transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+            --border-radius: 16px;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #f9f9f9 60%, #e53935 100%);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .about-hero {
+            background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 56px 0 40px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-radius: 0 0 32px 32px;
+            animation: fadeInDown 1s both;
+            position: relative;
+            z-index: 2;
+        }
+        .about-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: white;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0 auto 18px auto;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            border: 4px solid var(--secondary);
+            animation: avatarPop 1.2s cubic-bezier(0.4,0,0.2,1) 0.2s both;
+        }
+        .about-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s 0.4s both;
+        }
+        .about-role {
+            font-size: 1.1rem;
+            color: #fffbe7;
+            margin-bottom: 0;
+            font-weight: 500;
+            animation: fadeInUp 1s 0.6s both;
+            padding-bottom: 8px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 32px auto 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 48px 36px 32px 36px;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.2s 0.8s both;
+        }
+        .about-content {
+            font-size: 1.13rem;
+            line-height: 1.8;
+            margin-bottom: 32px;
+            color: var(--dark);
+            animation: fadeInUp 1s 1.1s both;
+        }
+        .about-highlight {
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(229,57,53,0.08);
+            animation: fadeInUp 1s 1.3s both;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 12px 32px;
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(229,57,53,0.07);
+            transition: var(--transition);
+            animation: fadeInUp 1s 1.5s both;
+        }
+        .back-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary-dark);
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 18px rgba(229,57,53,0.13);
+        }
+        @media (max-width: 700px) {
+            .container { padding: 24px 8px 18px 8px; margin-top: 18px; }
+            .about-title { font-size: 2rem; }
+            .about-hero { padding: 36px 0 24px 0; }
+        }
+        @media (max-width: 480px) {
+            .about-hero { padding: 24px 0 12px 0; border-radius: 0 0 18px 18px; }
+            .container { margin-top: 8px; }
+        }
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes avatarPop {
+            0% { opacity: 0; transform: scale(0.5); }
+            60% { opacity: 1; transform: scale(1.15); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-hero">
+        <div class="about-avatar"><i class="fas fa-user"></i></div>
+        <div class="about-title">Ankit Kumar</div>
+        <div class="about-role">BTech Student, Mechanical Engineering<br>Madhubani Engineering College, Bihar</div>
+    </div>
+    <div class="container">
+        <div class="about-highlight">
+            <i class="fas fa-lightbulb"></i> <b>"I believe technology can save lives—especially when it’s built by those who understand the real challenges."</b>
+        </div>
+        <div class="about-content">
+            Hello! I’m Ankit Kumar, a passionate coder from Saran District (Chapra), Bihar. Living in a college hostel, I’ve seen first-hand how difficult it can be to arrange emergency blood donations—especially in rural and semi-urban areas where there’s no quick access to donors or a centralized system.<br><br>
+            That’s why I created <b>BloodBank Connect</b>: a platform that connects patients and donors faster, smarter, and more reliably. My goal is to use technology to solve real problems that impact people around me.<br><br>
+            This project is a showcase of my front-end skills—HTML, CSS, JavaScript, and Supabase for authentication and real-time data. I’m also integrating AI (Gemini API) for intelligent blood group compatibility, making the platform not just functional, but life-saving.<br><br>
+            I believe that even as students, we can make a real difference in society through code. I’m always learning, improving, and dreaming bigger. My hope is to expand BloodBank Connect into a tool that helps people across India in urgent medical need.
+        </div>
+        <a href="blood_bank_connect_page.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+</body>
+</html> 
